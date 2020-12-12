@@ -31,19 +31,27 @@ function gernerateDetail(plant) {
                                 <p><span style="font-weight:bold;">Tình trạng:</span>${plant.status}</p>
                                 <p><span style="font-weight:bold;">Biện pháp bảo vệ:</span>${plant.protect}</p>
                         </div>
-                        <button id="btn_seen_img">Click to see image</button>
-                        <button id="btn_seen_infor">Click to see infor</button> 
+                        <div class="btn_seen">
+                            <button id="btn_seen_img">Click to see image</button>
+                            <button id="btn_seen_infor">Click to see infor</button> 
+                        </div>
                     </div>`;
     container.insertAdjacentHTML('beforeend', detailEle)
     // let btn_seen = document.getElementById('btn_seen')
     // btn_seen.addEventListener('click', () => {
         
     // })
-    $('#btn_seen').click(function(){
+    $('#btn_seen_img').click(function(){
         //block of code that runs when the click event triggers
-        $('.information').slideUp('slow');
-        $('.detail_h').slideUp('slow');
-        $('.detail_img').slideDown('slow');
+        $('.information').slideUp(1000);
+        $('.detail_h').slideUp(1000);
+        $('.detail_img').slideDown(1000);
+      });
+    $('#btn_seen_infor').click(function(){
+        //block of code that runs when the click event triggers
+        $('.information').slideDown(1000);
+        $('.detail_h').slideDown(1000);
+        $('.detail_img').slideUp(1000);
       });
 }
 function showDetail() {

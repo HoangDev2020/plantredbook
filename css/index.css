@@ -96,7 +96,7 @@ nav li a:hover{
     display: flex;
     align-items: center;
 }
-.searchTerm {
+#searchTerm {
     /* width: 100%; */
     border: 3px solid rgb(223, 223, 9);
     border-right: none;
@@ -107,11 +107,11 @@ nav li a:hover{
     color: #9DBFAF;
   }
   
-  .searchTerm:focus{
+#searchTerm:focus{
     color: #00B4CC;
   }
   
-  .searchButton {
+#searchButton {
     width: 40px;
     height: 36px;
     border: 1px solid #00B4CC;
@@ -149,6 +149,7 @@ nav li a:hover{
 .item h2{
     text-align: center;
     font-style: italic;
+    
 }
 .detail{
     background-size: cover;

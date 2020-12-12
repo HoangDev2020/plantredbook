@@ -4,14 +4,11 @@ let container = document.getElementById('container')
 function gerneratePlant() {
     for (let i = 0; i < data.length; i++) {
         let html = `<div class="item">
-       
-        <img src="${data[i].img}" class="img">
-        <h2 class="text" >${data[i].name}</h2>
-        
-                    </div>    `;
-        container.insertAdjacentHTML('beforeend', html);
-    };
-
+                        <img src="${data[i].img}" class="img">
+                        <h2 class="text" >${data[i].name}</h2>
+                    </div>`
+        container.insertAdjacentHTML('beforeend', html)
+    }
 }
 function gernerateDetail(plant) {
     container.innerHTML = ''
@@ -39,20 +36,22 @@ function gernerateDetail(plant) {
     container.insertAdjacentHTML('beforeend', detailEle)
     // let btn_seen = document.getElementById('btn_seen')
     // btn_seen.addEventListener('click', () => {
-        
+
     // })
-    $('#btn_seen_img').click(function(){
+    $('#btn_seen_img').click(function () {
         //block of code that runs when the click event triggers
         $('.information').slideUp(1000);
         $('.detail_h').slideUp(1000);
         $('.detail_img').slideDown(1000);
-      });
-    $('#btn_seen_infor').click(function(){
+    });
+    $('#btn_seen_infor').click(function () {
         //block of code that runs when the click event triggers
         $('.information').slideDown(1000);
         $('.detail_h').slideDown(1000);
         $('.detail_img').slideUp(1000);
-      });
+    });
+
+
 }
 function showDetail() {
     let item = document.getElementsByClassName('item')
@@ -62,10 +61,73 @@ function showDetail() {
         })
     }
 }
+function search_Incountry() {
+    let searchTerm = document.getElementById('searchTerm')
+    let searchButton = document.getElementById('searchButton')
+    searchButton.addEventListener('click', () => {
+        container.innerHTML = ''
+        let keyword = searchTerm.value
+        for (let i = 0; i < data.length; i++) {
+            let search_country = data[i].incountry
+            if (search_country.includes(keyword)) {
+                let htmlEle = `<div class="item">
+                                    <img src="${data[i].img}" class="img">
+                                    <h2 class="text">${data[i].name}</h2>
+                                </div>`;
+                container.insertAdjacentHTML('beforeend', htmlEle);
+            }
+        }
+        let item = document.getElementsByClassName('item')
+        for (let i = 0; i < item.length; i++) {
+            item[i].addEventListener('click', () => {
+                let text = document.getElementsByClassName('text')
+                for (let j = 0; j < data.length; j++) {
+                    if (text[i].textContent == data[j].name) {
+                        gernerateDetail(data[j])
+                    }
+                }
+            })
+        }
+    })
+}
+function search_Surname(){
+    let searchTerm = document.getElementById('searchTerm')
+    let searchButton = document.getElementById('searchButton')
+    searchButton.addEventListener('click', () => {
+        container.innerHTML = ''
+        let keyword = searchTerm.value
+        for (let i = 0; i < data.length; i++) {
+            let search_surname = data[i].surname
+            if (search_surname.includes(keyword)) {
+                let htmlEle = `<div class="item">
+                                    <img src="${data[i].img}" class="img">
+                                    <h2 class="text">${data[i].name}</h2>
+                                </div>`;
+                container.insertAdjacentHTML('beforeend', htmlEle);
+            }
+        }
+        let item = document.getElementsByClassName('item')
+        for (let i = 0; i < item.length; i++) {
+            item[i].addEventListener('click', () => {
+                let text = document.getElementsByClassName('text')
+                for (let j = 0; j < data.length; j++) {
+                    if (text[i].textContent == data[j].name) {
+                        gernerateDetail(data[j])
+                    }
+                }
+            })
+        }
+    })
+}
+
+
+
 
 
 gerneratePlant()
 showDetail()
+search_Incountry()
+search_Surname()
 
-{/* <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script> */}
+{/* <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script> */ }
 

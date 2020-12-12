@@ -1,0 +1,212 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#container::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+#container::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility:hidden ;
+    -moz-backface-visibility:hidden ;
+    backface-visibility:hidden ;
+    -moz-transform:translateZ(0), scale(1.0, 1.0) ;
+    -webkit-transform:translateZ(0), scale(1.0, 1.0) ;
+    -ms-transform:translateZ(0), scale(1.0, 1.0) ;
+    transform:translateZ(0), scale(1.0, 1.0)  ;
+    background-image: url(../img/backgroundOfSelection.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    animation: increase 60s linear 10ms infinite;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    z-index: -2;
+}
+@keyframes increase{
+    0%{transform: scale(1);}
+    100%{transform: scale(1.6);}
+}
+
+.btn_choice{
+    margin-top: 20px;
+    height: 200px;
+    width: 500px;
+    border-radius: 30px;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    -webkit-transition: font-size 0.3s ease-in-out;
+    -moz-transition: font-size 0.3s ease-in-out;
+    -ms-transition: font-size 0.3s ease-in-out;
+    -o-transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out;
+    -webkit-transition: letter-spacing 0.3s ease-in-out;
+    -moz-transition: letter-spacing 0.3s ease-in-out;
+    -ms-transition: letter-spacing 0.3s ease-in-out;
+    -o-transition: letter-spacing 0.3s ease-in-out;
+    transition: letter-spacing 0.3s ease-in-out;
+}
+.btn_choice:hover{
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+    font-size: 63px;
+    letter-spacing: 10px;
+}
+
+#btn_explore{
+    background-image: url(../img/backgroundOfBtn_explore.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #4FE50D;  
+    
+}
+#btn_explore:hover{
+    animation: hoverExplore 1s linear infinite;
+}
+@keyframes hoverExplore{
+    10%{
+        color: #45cd09;
+    }
+    20%{
+        color: #40c107;
+    }
+    30%{
+        color: #38aa05;
+    }
+    40%{
+        color: #319406;
+    }
+    50%{
+        color: #8efa5f;
+    }
+    60%{
+        color: #78f541;
+
+    }
+    70%{
+        color: #046703;
+    }
+    80%{
+        color: #ccf420;
+    }
+    90%{
+        color: #fdf809;
+    }
+    100%{
+        color: #3ac151;
+    }
+}
+
+
+#btn_quiz{
+    background-image: url(../img/backgroundOfBtn_quiz.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ECFB05;
+}
+#btn_quiz:hover{
+    animation: hoverQuiz 1s linear infinite;
+}
+@keyframes hoverQuiz{
+    10%{
+        color: #CA3131;
+    }
+    20%{
+        color: #EE5321;
+    }
+    30%{
+        color: #F14107;
+    }
+    40%{
+        color: #C83303;
+    }
+    50%{
+        color: #DE1207;
+    }
+    60%{
+        color: #F36F2B;
+    }
+    70%{
+        color: #AC2109;
+    }
+    80%{
+        color: #DB5120;
+    }
+    90%{
+        color: #FF7443;
+    }
+    100%{
+        color: #FC4F4F;
+    }
+}
+
+
+#btn_back{
+   background-image: url(../img/backToHomepage.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #00FFFF;
+}
+#btn_back:hover{
+    animation: hoverBack 1s linear infinite;
+}
+@keyframes hoverBack{
+    10%{
+        color: #00D9D9;
+    }
+    20%{
+        color: #00B2B2;
+    }
+    30%{
+        color: #008C8C;
+    }
+    40%{
+        color: #0080FF;
+    }
+    50%{
+        color: #00FF80;
+    }
+    60%{
+        color: #73FFFF;
+    }
+    70%{
+        color: #00D4FF;
+    }
+    80%{
+        color: #00FF80;
+    }
+    90%{
+        color: #4CFFFF;
+    }
+    100%{
+        color: #00FFAA;
+    }
+}

@@ -1,0 +1,186 @@
+
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#headerrr{
+    background-image: url(../img/indexHead.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 647px;
+    margin: 0;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    font-size: 30px;
+    color: red;
+    text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #aaa,
+                 0 6px 1px rgba(0,0,0,.1),
+                 0 0 5px rgba(0,0,0,.1),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgba(0,0,0,.15);
+}
+
+#header-text{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, red);
+   
+}
+
+#header-text span{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: textHeadAnimate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes textHeadAnimate{
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%, 100%{
+        transform: translateY(0px);
+    }
+}
+
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+}
+nav li{
+    float: left;
+}
+nav li a{
+    display: block;
+    color: yellow;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 17px;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+nav li a:hover{
+    background-color: yellow;
+    color: red;
+}
+#container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color:#03fc67;
+}
+.item{
+    
+    margin-top: 10px;
+    background-repeat: no-repeat;
+}
+.item img{
+    width: 257px;
+    height: 257px;
+    border: black 1px solid;
+   
+    
+}
+
+.item img:hover{
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+   
+}
+
+.item h2{
+    text-align: center;
+    font-style: italic;
+}
+.detail{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.detail_h{
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+}
+.information{
+    font-size: 25px;
+    color: red;
+    
+}
+#btn_seen{
+   margin-left: 50%;
+   height: 40px;
+   color: yellow;
+   background-color: red;
+   -webkit-transition: color 0.3s ease-in;
+   -ms-transition: color 0.3s ease-in;
+   -o-transition: color 0.3s ease-in;
+   -moz-transition: color 0.3s ease-in;
+   transition: color 0.3s ease-in;
+   -webkit-transition: backgroundcolor 0.4s ease-in;
+   -moz-transition: backgroundcolor 0.4s ease-in;
+   -ms-transition: backgroundcolor 0.4s ease-in;
+   -o-transition: backgroundcolor 0.4s ease-in;
+    
+    transition: backgroundcolor 0.4s ease-in;
+}
+#btn_seen:hover{
+    color: red;
+    background-color: yellow;
+}
+.detail_img{
+    height: 650px;
+    width: 650px;
+    border-radius: 500px;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+footer{
+    width: 100%;
+              height: 150px;
+              background-image: url('https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/48424950_136768993981417_6059324373544730624_n.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=kUvKBAN17AkAX8Sn0-M&_nc_ht=scontent.fhan2-2.fna&oh=da32b36be22a79118e04c710e74edd96&oe=5FF866F8');
+              background-size: 230px 150px;
+              background-repeat: no-repeat;
+              background-color: #3467eb;
+              display: flex;
+              justify-content: flex-end;
+  }
+  footer h4 {
+    margin-top: 30px;
+  }
+  
+  footer div {
+    margin-right: 15%;
+  }

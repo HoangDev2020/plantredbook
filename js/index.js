@@ -70,33 +70,14 @@ function search_Incountry() {
         for (let i = 0; i < data.length; i++) {
             let search_country = data[i].incountry
             if (search_country.includes(keyword)) {
+                console.log('1');
                 let htmlEle = `<div class="item">
                                     <img src="${data[i].img}" class="img">
                                     <h2 class="text">${data[i].name}</h2>
                                 </div>`;
                 container.insertAdjacentHTML('beforeend', htmlEle);
             }
-        }
-        let item = document.getElementsByClassName('item')
-        for (let i = 0; i < item.length; i++) {
-            item[i].addEventListener('click', () => {
-                let text = document.getElementsByClassName('text')
-                for (let j = 0; j < data.length; j++) {
-                    if (text[i].textContent == data[j].name) {
-                        gernerateDetail(data[j])
-                    }
-                }
-            })
-        }
-    })
-}
-function search_Surname(){
-    let searchTerm = document.getElementById('searchTerm')
-    let searchButton = document.getElementById('searchButton')
-    searchButton.addEventListener('click', () => {
-        container.innerHTML = ''
-        let keyword = searchTerm.value
-        for (let i = 0; i < data.length; i++) {
+
             let search_surname = data[i].surname
             if (search_surname.includes(keyword)) {
                 let htmlEle = `<div class="item">
@@ -114,11 +95,43 @@ function search_Surname(){
                     if (text[i].textContent == data[j].name) {
                         gernerateDetail(data[j])
                     }
+                    if (text[i].textContent == data[j].name) {
+                        gernerateDetail(data[j])
+                    }
                 }
             })
         }
     })
 }
+// function search_Surname(){
+//     let searchTerm = document.getElementById('searchTerm')
+//     let searchButton = document.getElementById('searchButton')
+//     searchButton.addEventListener('click', () => {
+//         container.innerHTML = ''
+//         let keyword = searchTerm.value
+//         for (let i = 0; i < data.length; i++) {
+//             let search_surname = data[i].surname
+//             if (search_surname.includes(keyword)) {
+//                 let htmlEle = `<div class="item">
+//                                     <img src="${data[i].img}" class="img">
+//                                     <h2 class="text">${data[i].name}</h2>
+//                                 </div>`;
+//                 container.insertAdjacentHTML('beforeend', htmlEle);
+//             }
+//         }
+//         let item = document.getElementsByClassName('item')
+//         for (let i = 0; i < item.length; i++) {
+//             item[i].addEventListener('click', () => {
+//                 let text = document.getElementsByClassName('text')
+//                 for (let j = 0; j < data.length; j++) {
+//                     if (text[i].textContent == data[j].name) {
+//                         gernerateDetail(data[j])
+//                     }
+//                 }
+//             })
+//         }
+//     })
+// }
 
 
 
@@ -127,7 +140,7 @@ function search_Surname(){
 gerneratePlant()
 showDetail()
 search_Incountry()
-search_Surname()
+// search_Surname()
 
 {/* <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script> */ }
 

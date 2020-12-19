@@ -1,0 +1,207 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+#container {
+    background-image: url(../img/backgroundOfQuiz.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+#container a{
+    text-decoration: none;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: rgb(1, 149, 248);
+    -webkit-transition: letter-spacing 0.3s ease-out;
+    -moz-transition: letter-spacing 0.3s ease-out;
+    -ms-transition: letter-spacing 0.3s ease-out;
+    -o-transition: letter-spacing 0.3s ease-out;
+    transition: letter-spacing 0.3s ease-out;
+    -webkit-transition: font-size 0.3s ease-out;
+    -ms-transition: font-size 0.3s ease-out;
+    -moz-transition: font-size 0.3s ease-out;
+    -o-transition: font-size 0.3s ease-out;
+    transition: font-size 0.3s ease-out;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #131313,
+                 0 0 80px rgb(15, 109, 172),
+                 0 0 120px rgb(15, 109, 172),
+                 0 0 160px rgb(15, 109, 172);
+}
+
+#container a:hover{
+    letter-spacing: 2px;
+    font-size: 70px;
+}
+#question_container{
+    display: grid;
+    justify-content: space-around;
+    margin-left: 50px;
+}
+#question{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 67px;
+    text-transform: uppercase;
+    
+    /* height: 100px; */
+}
+#answer1and2{
+    display: flex;
+    margin-top: 150px;
+}
+
+#answer1{
+    margin-right: 100px;  
+}
+#answer1:hover{
+    transform: rotate(20deg);
+    background-color: black;
+    color: white;
+}
+#answer2:hover{
+    transform: rotate(20deg);
+    background-color: black;
+    color: white;
+}
+#answer3:hover{
+    transform: rotate(-20deg);
+    background-color: black;
+    color: white;
+}
+#answer4:hover{
+    transform: rotate(-20deg);
+    background-color: black;
+    color: white;
+}
+.answer{
+    /* background-color: black; */
+    height: 80px;
+    width: 370px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 10px 15px; */
+    border: black 1px solid;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all 1.3s ease;
+    margin-left: 30px;
+    
+}
+.answer:hover{
+    cursor: pointer;
+}
+/* .answer:before{
+    width: 100%;
+    height: 0;
+   
+} */
+/* .answer:hover{
+    /* height: 100%; */
+    /* transform: translate(-50%, -50%) ; */
+    /* transform: rotate(20deg);
+    background-color: black;
+    color: white; */
+/* } */ 
+#answer3and4{
+    display: flex;
+    margin-top: 50px;
+}
+#answer3{
+    margin-right: 100px;
+}
+
+#score{
+    text-align: center;
+    font-size: large;
+
+}
+
+#finish{
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); 
+    transition: all 1s ease-in-out;
+}
+#finish_content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    height: 300px;
+    border: 1px solid #888;
+    width: 70%;
+    text-align: center;
+}
+#finish_content h1{
+    font-size: 90px;
+    text-transform: uppercase;
+    animation: finishMessage 2s infinite linear;
+}
+@keyframes finishMessage{
+    20%{
+        color: red;
+    }
+    40%{
+        color: green;
+    }
+    60%{
+        color: blue;
+    }
+    80%{
+        color: gold;
+    }
+    100%{
+        color: purple;
+    }
+}
+#finish_content button:hover{
+    cursor: pointer;
+}
+.close{
+    float: right;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#btn_tryAgain{
+    height: 40px;
+    text-transform: uppercase;
+    background-color: green;
+    color: white;
+}
+#btn_tryAgain:hover{
+    /* transition: all 1s ease-in-out; */
+    animation: hoverTryAgain 0.8s infinite linear;
+}
+@keyframes hoverTryAgain{
+    0%, 10%, 20%{
+        transform: rotate(-10deg);
+    }
+    30%, 40%, 50%, 60%, 70%{
+        transform: rotate(0deg);
+    }
+    80%, 90%, 100%{
+        transform: rotate(10deg);
+    }
+}

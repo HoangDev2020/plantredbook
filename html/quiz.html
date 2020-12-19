@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        /* #frame011 {
+            background-color: white;
+            border: 4px solid black;
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        .buttons001 {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 100px;
+        }
+
+        .buttons002 {
+            background-color: lightblue;
+            color: black;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 50px;
+        }
+
+        #text001 {
+            text-align: center;
+        }
+
+        #text002 {
+            text-align: left;
+        }
+
+        #green001 {
+            color: green;
+        }
+
+        #red001 {
+            color: red;
+        } */
+        #popup{
+            display: none;
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); 
+            transition: all 1s ease-in-out;
+        }
+        #content{
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+    </style>
+    <div id="popup">
+        <div id="content">
+            <span class="close">&times;</span>
+            <h1>Congratulate</h1>
+ </div>
+        
+    </div>
+    <button id="btn">cac</button>
+    <!-- <div id="frame001">
+        <div id="text001">
+            <h2>Quiz</h2>
+            <p>Question: <text id="number001">0</text></p>
+            <p>Score: <text id="Score001">0</text></p>
+
+            <hr />
+            <div id="message001">Click Begin to start</div>
+        </div>
+        <div id="text002">
+            <div id="question001"></div>
+            <div id="option001"></div>
+            <div id="option002"></div>
+            <div id="option003"></div>
+            <div id="option004"></div>
+            <div id="answer001"></div>
+
+            <div id="text001">
+                <div id="disappear001"><button class="buttons001" onclick="begin001()">Begin</button>
+                </div>
+                <div id="next001"></div>
+            </div>
+        </div> -->
+
+         <script>
+             let btn = document.getElementById('btn')
+             btn.addEventListener('click', () => {
+                 let popup = document.getElementById('popup')
+                 popup.style.display = 'block'
+             })
+            // var q = ["What is 1 + 1?<br /><br />", "What is 2 + 2?<br /><br />", "What is 3 + 3?<br /><br />", "What is 4 + 4?<br /><br />", "What is 5 + 5?<br /><br />",];
+            // var a1 = ["<button class=buttons002 onclick=q1c()>2</button>",
+            //     "<button class=buttons002 onclick=q2i()>9</button>"];
+
+            // var a2 = ["<button class=buttons002 onclick=qli()>4</button>",
+            //     "<button class=buttons002 onclick=q2i()>3</button>"];
+
+            // var a3 = ["<button class=buttons002 onclick=qli()>5</button>",
+            //     "<button class=buttons002 onclick=q2c()>4</button>"];
+
+            // var a4 = ["<button class=buttons002 onclick=qli()>7</button>",
+            //     "<button class=buttons002 onclick=q2i()>5</button>"];
+
+
+
+            // var c = ["Correct ", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct", "Correct"];
+
+            // var i = ["Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect", "Incorrect"]
+
+            // var n = 0;
+            // n++;
+            // var s = 0;
+            // s++;
+
+            // function begin001() {
+            //     disappear001.innerHTML = "";
+            //     message001.innerHTML = "";
+            //     question001.innerHTML = q[0];
+            //     option001.innerHTML = a1[0];
+            //     option002.innerHTML = a2[0];
+            //     option003.innerHTML = a3[0];
+            //     option004.innerHTML = a4[0];
+            //     number001.innerHTML = n++;
+            // }
+            // function q1c() {
+            //     answer001.innerHTML = "<div id=green001>" + c[0] + "</div>";
+            //     option001.innerHTML = "";
+            //     option002.innerHTML = "";
+            //     option003.innerHTML = "";
+            //     option004.innerHTML = "";
+            //     next001.innerHTML = "<button class=buttons001 onclick=new002()>Next</button>";
+            //     Score001.innerHTML = s++;
+            // }
+            // function qli() {
+            //     answer001.innerHTML = "<div id=red001>" + i[0] + "</div>";
+            //     option001.innerHTML = "";
+            //     option002.innerHTML = "";
+            //     option003.innerHTML = "";
+            //     option004.innerHTML = "";
+            //     next001.innerHTML = "<button class=buttons001 onclick=new002()>Next</button>";
+            // }
+            // function new002() {
+            //     question001.innerHTML = q[1];
+            //     option001.innerHTML = a1[1];
+            //     option002.innerHTML = a2[1];
+            //     option003.innerHTML = a3[1];
+            //     option004.innerHTML = a4[1];
+            //     next001.innerHTML = "";
+            //     answer001.innerHTML = "";
+            //     number001.innerHTML = n++;
+            // }
+            // function q2c() {
+            //     answer001.innerHTML = "<div id=green001>" + c[1] + "</div>"
+            //     option001.innerHTML = "";
+            //     option002.innerHTML = "";
+            //     option003.innerHTML = "";
+            //     option004.innerHTML = "";
+            //     next001.innerHTML = "<button class=buttons001 onclick=end001()>End of Quiz</button>";
+            //     Score001.innerHTML = s++;
+            // }
+
+            // function q2i() {
+            //     answer001.innerHTML = "<div id=red001>" + i[1] + "</div>"
+            //     option001.innerHTML = "";
+            //     option002.innerHTML = "";
+            //     option003.innerHTML = "";
+            //     option004.innerHTML = "";
+            //     next001.innerHTML = "<button class=buttons001 onclick=end001()>End of Quiz</button>";
+            // }
+            // function end001() {
+            //     message001.innerHTML = "End of Quiz";
+            //     question001.innerHTML = "";
+            //     option001.innerHTML = "";
+            //     option002.innerHTML = "";
+            //     option003.innerHTML = "";
+            //     option004.innerHTML = "";
+            //     next001.innerHTML = "<div id=text001>" + "<button class=buttons001 onclick=repeat001()>Repeat</button>" + "</div>";
+            // }
+            // function repeat001() {
+            //     location.reload();
+            // }
+        </script>
+
+</body>
+
+</html>

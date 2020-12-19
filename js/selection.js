@@ -8,3 +8,8 @@ let btn_explore = document.getElementById('btn_explore')
 btn_explore.addEventListener('click', () => {
     window.open('index.html')
 })
+
+let btn_quiz = document.getElementById('btn_quiz')
+btn_quiz.addEventListener('click', () => {
+    window.open('quiz2.html')
+})

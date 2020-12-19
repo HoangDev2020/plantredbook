@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/quiz2.css">
+    <link rel="icon" href="../img/titleIcon.jpg" type="image/x-icon">
+    <script src="../js/quiz2.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1><a href="#" id="btn_clickToBegin">>>Click to begin</a></h1>
+
+    </div>
+    <div id="question_container" style="display: none;">
+        <div id="question"></div>
+        <div id="score"></div>
+        <hr>
+        <div id="answer_container">
+            <div id="answer1and2">
+                <div id="answer1" class="answer"></div>
+                <div id="answer2" class="answer"></div>
+            </div>
+            <br>
+            <div id="answer3and4">
+                <div id="answer3" class="answer"></div>
+                <div id="answer4" class="answer"></div>
+            </div>
+        </div>
+        <div id="finish">
+            <div id="finish_content">
+                <span class="close">&times;</span>
+                <h1 id="finished_content">Congratulate</h1>
+                <button id="btn_tryAgain">Try again</button>
+            </div>
+        </div>
+        <audio id="correct_sound">
+            <source src="../sound/correct_sound.mp3" > 
+        </audio>
+        <audio id="wrong_sound">
+            <source src="../sound/wrong_sound.mp3">
+        </audio>
+</body>
+
+</html>

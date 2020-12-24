@@ -79,6 +79,7 @@ html, body{
     transform: scale(1.1,1.1);
     font-size: 63px;
     letter-spacing: 10px;
+    cursor: pointer;
 }
 
 #btn_explore{

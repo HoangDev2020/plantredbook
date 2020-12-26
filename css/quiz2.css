@@ -1,6 +1,7 @@
 html, body{
     margin: 0;
     height: 100%;
+    
 }
 #container {
     background-image: url(../img/backgroundOfQuiz.jpg);
@@ -41,14 +42,15 @@ html, body{
     letter-spacing: 2px;
     font-size: 70px;
 }
+
 #question_container{
     display: grid;
     justify-content: space-around;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 #question{
     text-align: center;
-    margin-top: 70px;
+    margin-top: 65px;
     font-size: 67px;
     text-transform: uppercase;
     
@@ -56,7 +58,7 @@ html, body{
 }
 #answer1and2{
     display: flex;
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 #answer1{

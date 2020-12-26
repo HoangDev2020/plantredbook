@@ -169,12 +169,128 @@ html, body{
     }
 }
 
-
+#btn_game{
+    background-image: url(../img/backgroundOfBtn_game.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #b628e6;
+}
+#btn_game:hover{
+    animation: hoverGame 1s linear infinite;
+}
+@keyframes hoverGame{
+    10%{
+        color: #e628d6;
+    }
+    20%{
+        color: #ad14a1;
+    }
+    30%{
+        color: #610eb4;
+    }
+    40%{
+        color: #c792e8;
+    }
+    50%{
+        color: #639bde;
+    }
+    60%{
+        color: #4f3fa6;
+    }
+    70%{
+        color: #3217cf;
+    }
+    80%{
+        color: #1912a1;
+    }
+    90%{
+        color: #1d13e7;
+    }
+    100%{
+        color: #13a4e7;
+    }
+}
+#btn_aboutus{
+    background-image: url(../img/backgroundOfBtn_aboutus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(209, 194, 194);
+}
+#btn_aboutus:hover{
+    animation: hoverAboutus 1s linear infinite;
+}
+@keyframes hoverAboutus{
+    10%{
+        color: #e3e2d9;
+    }
+    20%{
+        color: #d8d8ca;
+    }
+    30%{
+        color: #c0bfaa;
+    }
+    40%{
+        color: #d9e3d9;
+    }
+    50%{
+        color: #d9e3e0;
+    }
+    60%{
+        color: #dad9e3;
+    }
+    70%{
+        color: #b5c4b0;
+    }
+    80%{
+        color: #b0c4bb;
+    }
+    90%{
+        color: #a8ccbb;
+    }
+    100%{
+        color: #eae8dc;
+    }
+}
 #btn_back{
    background-image: url(../img/backToHomepage.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    color: #00FFFF;
+}
+#btn_back:hover{
+    animation: hoverBack 1s linear infinite;
+}
+@keyframes hoverBack{
+    10%{
+        color: #00D9D9;
+    }
+    20%{
+        color: #00B2B2;
+    }
+    30%{
+        color: #008C8C;
+    }
+    40%{
+        color: #0080FF;
+    }
+    50%{
+        color: #00FF80;
+    }
+    60%{
+        color: #73FFFF;
+    }
+    70%{
+        color: #00D4FF;
+    }
+    80%{
+        color: #00FF80;
+    }
+    90%{
+        color: #4CFFFF;
+    }
+    100%{
+        color: #00FFAA;
+    }
 }
 #btn_back:hover{
     animation: hoverBack 1s linear infinite;

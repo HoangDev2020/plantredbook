@@ -187,6 +187,7 @@ nav li a:hover{
 #btn_seen_img:hover{
     color: black;
     background-color: white;
+    cursor: pointer;
 }
 #btn_seen_infor{
     /* margin-left: 50%; */
@@ -209,6 +210,7 @@ nav li a:hover{
 #btn_seen_infor:hover{
      color: black;
      background-color: white;
+     cursor: pointer;
  }
 .detail_img{
     height: 500px;

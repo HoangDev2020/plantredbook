@@ -24,11 +24,31 @@ canvas.addEventListener('mouseup', function () {
 })
 
 // Player
-
 const playerLeft = new Image()
-playerLeft.src = '../img/playerLeft.jpg'
 const playerRight = new Image()
-playerRight.src = '../img/playerRight.jpg'
+const choosePlayers = [
+    {
+        PlayerRight:'../img/playerRight.jpg',
+        PlayerLeft:'../img/playerLeft.jpg'
+    },
+    {
+        PlayerRight:'../img/haivuRight.jpg',
+        PlayerLeft:'../img/haivuLeft.jpg'
+    }
+]
+
+let choosePlayer = document.getElementsByClassName('choosePlayer')
+for(let i = 0; i < choosePlayers.length; i++){
+    choosePlayer[i].addEventListener('click', () => {
+        choosePlayer[i].style.display = 'none'
+        playerLeft.src = `${choosePlayers[i].PlayerLeft}`
+        playerRight.src = `${choosePlayers[i].PlayerRight}`
+    })
+}
+
+
+
+
 class Player {
     constructor() {
         this.x = canvas.width / 2
@@ -93,7 +113,7 @@ class Bubble {
         this.x = Math.random() * canvas.width
         this.y = canvas.height + 100
         this.radius = 50
-        this.speed = Math.random() * 8 + 1
+        this.speed = Math.random() * 9 + 1
         this.distance
         this.counted = false
         this.sound = Math.random() < 0.5 ? 'sound1' : 'sound2'
@@ -118,7 +138,7 @@ class Bubble {
 }
 
 const bubblePop1 = document.createElement('audio')
-bubblePop1.src = '../sound/bubble1.wav'
+bubblePop1.src = '../sound/correct_sound.mp3'
 const bubblePop2 = document.createElement('audio')
 bubblePop2.src = '../sound/Plop.ogg'
 
@@ -206,11 +226,11 @@ window.addEventListener('resize', function() {
     canvasPosition = canvas.getBoundingClientRect()
 })
 
+let btn = document.getElementById('btn')
 let btn_back = document.getElementById('btn_back')
 let btn_start = document.getElementById('btn_start')
 btn_start.addEventListener('click', () => {
-    btn_start.style.display = 'none'
-    btn_back.style.display = 'none'
+    btn.style.display = 'none'
     animate()
 })
 btn_back.addEventListener('click', () => {

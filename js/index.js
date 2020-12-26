@@ -5,10 +5,11 @@ function gerneratePlant() {
     for (let i = 0; i < data.length; i++) {
         let html = `<div class="item">
                         <img src="${data[i].img}" class="img">
-                        <h2 class="text" >${data[i].name}</h2>
+                        <h2 class="text">${data[i].name}</h2>
                     </div>`
         container.insertAdjacentHTML('beforeend', html)
     }
+    
 }
 function gernerateDetail(plant) {
     container.innerHTML = ''

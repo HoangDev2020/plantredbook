@@ -13,3 +13,8 @@ let btn_quiz = document.getElementById('btn_quiz')
 btn_quiz.addEventListener('click', () => {
     window.open('quiz2.html')
 })
+
+let btn_game = document.getElementById('btn_game')
+btn_game.addEventListener('click', () => {
+    window.open('game2.html')
+})

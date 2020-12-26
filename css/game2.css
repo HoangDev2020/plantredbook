@@ -12,7 +12,16 @@ body {
 }
 #btn{
     display: grid;
-    margin-bottom: 490px;
+    margin-bottom: 400px;
+}
+#btn img{
+    height: 70px;
+    width: 103px;
+    border-radius: 60px;
+    margin-top: 10px;
+}
+#btn img:hover{
+    cursor: pointer;
 }
 #btn_start{
     height: 30px;

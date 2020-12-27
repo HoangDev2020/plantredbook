@@ -18,3 +18,8 @@ let btn_game = document.getElementById('btn_game')
 btn_game.addEventListener('click', () => {
     window.open('game2.html')
 })
+
+let btn_aboutus = document.getElementById('btn_aboutus')
+btn_aboutus.addEventListener('click', () => {
+    window.open('aboutus.html')
+})
